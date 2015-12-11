@@ -1,0 +1,10 @@
+
+<% @page_title = "UserAuth | Login" -%>
+<div class= "Sign_Form">
+  <h1>FILTER</h1>
+  <%= form_tag(:action => 'create') do %>
+    <p>name:</br> <%= text_field_tag(:name) %></p> 
+    
+    <%= submit_tag("Search") %>
+  <% end %>
+</div>

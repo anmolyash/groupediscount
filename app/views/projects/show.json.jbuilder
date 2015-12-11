@@ -1,0 +1,1 @@
+json.extract! @project, :id, :Project_name, :address, :location, :latitude, :longitude, :size, :total_area, :launch_date, :possesion_date, :price, :price_per_sq_feet, :offer, :overview, :created_at, :updated_at

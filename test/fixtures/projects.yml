@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Project_name: MyString
+  address: MyString
+  latitude: MyString
+  longitude: MyString
+  size: MyString
+  total_area: MyString
+  launch_date: MyString
+  possesion_date: MyString
+  price: MyString
+  price_per_sq_feet: MyString
+  offer: false
+  overview: MyString
+
+two:
+  Project_name: MyString
+  address: MyString
+  latitude: MyString
+  longitude: MyString
+  size: MyString
+  total_area: MyString
+  launch_date: MyString
+  possesion_date: MyString
+  price: MyString
+  price_per_sq_feet: MyString
+  offer: false
+  overview: MyString

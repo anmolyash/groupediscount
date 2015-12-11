@@ -1,0 +1,24 @@
+<%= form_for(@cityzone) do |f| %>
+  <% if @cityzone.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cityzone.errors.count, "error") %> prohibited this cityzone from being saved:</h2>
+
+      <ul>
+      <% @cityzone.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Select_city%><br>
+    <%= f.collection_select :city_id, City.all, :id, :city, {prompt: "City"} %>
+    <br>
+    <%= f.label :cityzone %><br>
+    <%= f.text_field :cityzone %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

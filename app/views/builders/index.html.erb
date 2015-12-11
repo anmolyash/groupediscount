@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Builders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Company</th>
+      <th>Phone1</th>
+      <th>Phone2</th>
+      <th>Email1</th>
+      <th>Email2</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @builders.each do |builder| %>
+      <tr>
+        <td><%= builder.name %></td>
+        <td><%= builder.phone %></td>
+        <td><%= builder.email %></td>
+        <td><%= builder.company %></td>
+        <td><%= builder.phone1 %></td>
+        <td><%= builder.phone2 %></td>
+        <td><%= builder.email1 %></td>
+        <td><%= builder.email2 %></td>
+        <td><%= link_to 'Show', builder %></td>
+        <td><%= link_to 'Edit', edit_builder_path(builder) %></td>
+        <td><%= link_to 'Destroy', builder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Builder', new_builder_path %>

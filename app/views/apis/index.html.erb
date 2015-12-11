@@ -1,0 +1,45 @@
+<% @result.each do |r| %>
+<br>
+Builder:
+<% @b_id=r.builder_id %>
+<%= @b_id%>
+<br>
+Builder Name:
+ <% @bname=Builder.find_by("id": @b_id)   %>
+ <%= @bname.name %>
+
+ 
+<br>
+Project Name:
+<%= r.Project_name %>
+<br>
+Category:
+<% @cat_id=r.cat_id %>
+<% @cat_name=Category.find_by("id": @cat_id) %>
+<%= @cat_name.category %>
+<br>
+Image:
+<%= r.image %>
+<br>
+Address: 
+<%= r.address %>
+<br>
+State:
+<%= r.state_id %>
+<br>
+City: 
+<%= r.city_id %>
+<BR>Location:
+<%= r.cityzone_id %>
+<br>
+Price:
+<%= r.price %>
+
+<br>
+<%= @result.to_json %>
+<br>
+
+<% end %>
+
+
+ 

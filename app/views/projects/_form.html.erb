@@ -1,0 +1,97 @@
+<%= form_for(@project) do |f| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% @project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Select_builder %><br>
+    <%= f.collection_select :builder_id, Builder.all, :id, :name, {prompt: "Choose Builder"} %>
+    <br>
+    <%= f.label :Project_name %><br>
+    <%= f.text_field :Project_name %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+ <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+
+  <div class="field">
+   <%= f.label :Select_state%><br>
+    <%= f.collection_select :state_id, State.all, :id, :state, {prompt: "State"} %>
+    </div>
+<div class="field">
+    <%= f.label :Select_city%><br>
+    <%= f.collection_select :city_id, City.all, :id, :city, {prompt: "City"} %>
+    </div>
+<div class="field">
+    <%= f.label :Select_cityzone%><br>
+    <%= f.collection_select :cityzone_id, Cityzone.all, :id, :cityzone, {prompt: "CityZone"} %>
+    </div>
+    <div class="field">
+     <%= f.label :Select_status%><br>
+      <%= f.collection_select :status_id, Status.all, :id, :status, {prompt: "Status"} %>
+
+    </div>
+     <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+  </div>
+  <br>
+   <%= f.label :Select_builder %><br>
+    <%= f.collection_select :cat_id, Category.all, :id, :category, {prompt: "Choose Category"} %>
+  <div class="field">
+    <%= f.label :latitude %><br>
+    <%= f.text_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br>
+    <%= f.text_field :longitude %>
+  </div>
+  <div class="field">
+    <%= f.label :size %><br>
+    <%= f.text_field :size %>
+  </div>
+  <div class="field">
+    <%= f.label :total_area %><br>
+    <%= f.text_field :total_area %>
+  </div>
+  <div class="field">
+    <%= f.label :launch_date %><br>
+    <%= f.text_field :launch_date %>
+  </div>
+  <div class="field">
+    <%= f.label :possesion_date %><br>
+    <%= f.text_field :possesion_date %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :price_per_sq_feet %><br>
+    <%= f.text_field :price_per_sq_feet %>
+  </div>
+  <div class="field">
+    <%= f.label :offer %><br>
+    <%= f.check_box :offer %>
+  </div>
+  <div class="field">
+    <%= f.label :overview %><br>
+    <%= f.text_field :overview %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
